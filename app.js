@@ -12,9 +12,11 @@ app.use(bodyParser.json());
 //Import routes
 const usersRoute = require('./routes/users');
 const loginRoute = require('./routes/login');
+const accountRoute = require('./routes/accounts');
 
 app.use('/users', usersRoute); //Removes the usage of /users in users.js
 app.use('/login', loginRoute); //Removes the usage of /login in login.js
+app.use('/accounts', accountRoute); //Removes the usage of /accounts in accounts.js
 
 //Database connection
 mongoose.connect(process.env.DB_CONNECTION,
