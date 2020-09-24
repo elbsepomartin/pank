@@ -12,9 +12,10 @@ router.get('/', async (req, res) => {
     }
 });
 
-//Saves a user and password
+//Saves a user with an username and password
 router.post('/', async (req, res) => {
     const user = new User({
+        name: req.body.name,
         username: req.body.username,
         password: req.body.password
     });
@@ -50,6 +51,11 @@ router.delete('/:userId', async (req, res) => {
 //Update a username and password
 router.patch('/:userId', async (req, res) => {
     try {
+        const updatedName = await User.updateOne(
+            { _id: req.params.userId }, 
+            { $set: { name: req.body.name } }
+        );
+
         const updatedUser = await User.updateOne(
             { _id: req.params.userId }, 
             { $set: { username: req.body.username } }
@@ -60,8 +66,9 @@ router.patch('/:userId', async (req, res) => {
             { $set: { password: req.body.password } }
         );
 
-            res.json(updatedPassword);
-            res.json(updatedUser);
+        res.json(updatedName);
+        res.json(updatedPassword);
+        res.json(updatedUser);
     } catch (err) {
         res.json({ message: err });
     }
