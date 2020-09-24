@@ -1,0 +1,412 @@
+{
+    "swagger": "2.0",
+    "info": {
+       "description": "defaultDescription",
+       "version": "0.1",
+       "title": "defaultTitle"
+    },
+    "paths": {
+       "/login/5f5b53fb0e891439bc9ab6bd": {
+          "delete": {
+             "consumes": [
+                "application/json"
+             ],
+             "produces": [
+                "application/json"
+             ],
+             "parameters": [
+                {
+                   "in": "body",
+                   "name": "body",
+                   "required": false,
+                   "schema": {
+                      "$ref": "#/definitions/Model0"
+                   },
+                   "x-examples": {
+                      "application/json": "{\n    \"username\": \"admin\",\n    \"password\": \"mongo123\"\n}"
+                   }
+                }
+             ],
+             "responses": {
+                "200": {
+                   "description": "Definition generated from Swagger Inspector",
+                   "schema": {
+                      "$ref": "#/definitions/Model4"
+                   }
+                }
+             }
+          }
+       },
+       "/login": {
+          "post": {
+             "consumes": [
+                "application/json"
+             ],
+             "produces": [
+                "application/json"
+             ],
+             "parameters": [
+                {
+                   "in": "body",
+                   "name": "body",
+                   "required": false,
+                   "schema": {
+                      "$ref": "#/definitions/Model3"
+                   },
+                   "x-examples": {
+                      "application/json": "{\n    \"username\": \"admin\",\n    \"password\": \"mongo123\"\n}"
+                   }
+                }
+             ],
+             "responses": {
+                "200": {
+                   "description": "Definition generated from Swagger Inspector",
+                   "schema": {
+                      "$ref": "#/definitions/Model5"
+                   }
+                }
+             }
+          }
+       },
+       "/users/5f5a0b9a3fbe112544a65ddb": {
+          "patch": {
+             "consumes": [
+                "application/json"
+             ],
+             "produces": [
+                "application/json"
+             ],
+             "parameters": [],
+             "responses": {
+                "200": {
+                   "description": "Definition generated from Swagger Inspector",
+                   "schema": {
+                      "$ref": "#/definitions/Model6"
+                   }
+                }
+             }
+          }
+       },
+       "/users/5f5b54540e891439bc9ab6be": {
+          "get": {
+             "produces": [
+                "application/json"
+             ],
+             "parameters": [],
+             "responses": {
+                "200": {
+                   "description": "Definition generated from Swagger Inspector",
+                   "schema": {
+                      "$ref": "#/definitions/Model8"
+                   }
+                }
+             }
+          },
+          "delete": {
+             "consumes": [
+                "application/json"
+             ],
+             "produces": [
+                "application/json"
+             ],
+             "parameters": [
+                {
+                   "in": "body",
+                   "name": "body",
+                   "required": false,
+                   "schema": {
+                      "$ref": "#/definitions/Model1"
+                   },
+                   "x-examples": {
+                      "application/json": "{\n    \"username\": \"test\",\n    \"password\": \"test123\"\n}"
+                   }
+                }
+             ],
+             "responses": {
+                "200": {
+                   "description": "Definition generated from Swagger Inspector",
+                   "schema": {
+                      "$ref": "#/definitions/Model7"
+                   }
+                }
+             }
+          }
+       },
+       "/users": {
+          "get": {
+             "produces": [
+                "application/json"
+             ],
+             "parameters": [],
+             "responses": {
+                "200": {
+                   "description": "Definition generated from Swagger Inspector",
+                   "schema": {
+                      "$ref": "#/definitions/Model10"
+                   }
+                }
+             }
+          },
+          "post": {
+             "consumes": [
+                "application/json"
+             ],
+             "produces": [
+                "application/json"
+             ],
+             "parameters": [
+                {
+                   "in": "body",
+                   "name": "body",
+                   "required": false,
+                   "schema": {
+                      "$ref": "#/definitions/Model2"
+                   },
+                   "x-examples": {
+                      "application/json": "{\n    \"username\": \"test\",\n    \"password\": \"test123\"\n}"
+                   }
+                }
+             ],
+             "responses": {
+                "200": {
+                   "description": "Definition generated from Swagger Inspector",
+                   "schema": {
+                      "$ref": "#/definitions/Model9"
+                   }
+                }
+             }
+          }
+       }
+    },
+    "definitions": {
+       "Model0": {
+          "properties": {
+             "username": {
+                "type": "string"
+             },
+             "password": {
+                "type": "string"
+             }
+          }
+       },
+       "Model1": {
+          "properties": {
+             "username": {
+                "type": "string"
+             },
+             "password": {
+                "type": "string"
+             }
+          }
+       },
+       "Model2": {
+          "properties": {
+             "username": {
+                "type": "string"
+             },
+             "password": {
+                "type": "string"
+             }
+          }
+       },
+       "Model3": {
+          "properties": {
+             "username": {
+                "type": "string"
+             },
+             "password": {
+                "type": "string"
+             }
+          }
+       },
+       "Model4": {
+          "properties": {
+             "message": {
+                "type": "string"
+             }
+          }
+       },
+       "Model5": {
+          "properties": {
+             "msg": {
+                "type": "string"
+             }
+          }
+       },
+       "OpTime": {
+          "properties": {
+             "ts": {
+                "type": "string"
+             },
+             "t": {
+                "type": "integer",
+                "format": "int32"
+             }
+          }
+       },
+       "Signature": {
+          "properties": {
+             "hash": {
+                "type": "string"
+             },
+             "keyId": {
+                "type": "string"
+             }
+          }
+       },
+       "$clusterTime": {
+          "properties": {
+             "clusterTime": {
+                "type": "string"
+             },
+             "signature": {
+                "$ref": "#/definitions/Signature"
+             }
+          }
+       },
+       "Model6": {
+          "properties": {
+             "n": {
+                "type": "integer",
+                "format": "int32"
+             },
+             "nModified": {
+                "type": "integer",
+                "format": "int32"
+             },
+             "opTime": {
+                "$ref": "#/definitions/OpTime"
+             },
+             "electionId": {
+                "type": "string"
+             },
+             "ok": {
+                "type": "integer",
+                "format": "int32"
+             },
+             "$clusterTime": {
+                "$ref": "#/definitions/$clusterTime"
+             },
+             "operationTime": {
+                "type": "string"
+             }
+          }
+       },
+       "Model7_OpTime": {
+          "properties": {
+             "ts": {
+                "type": "string"
+             },
+             "t": {
+                "type": "integer",
+                "format": "int32"
+             }
+          }
+       },
+       "Model7_$clusterTime_Signature": {
+          "properties": {
+             "hash": {
+                "type": "string"
+             },
+             "keyId": {
+                "type": "string"
+             }
+          }
+       },
+       "Model7_$clusterTime": {
+          "properties": {
+             "clusterTime": {
+                "type": "string"
+             },
+             "signature": {
+                "$ref": "#/definitions/Model7_$clusterTime_Signature"
+             }
+          }
+       },
+       "Model7": {
+          "properties": {
+             "n": {
+                "type": "integer",
+                "format": "int32"
+             },
+             "opTime": {
+                "$ref": "#/definitions/Model7_OpTime"
+             },
+             "electionId": {
+                "type": "string"
+             },
+             "ok": {
+                "type": "integer",
+                "format": "int32"
+             },
+             "$clusterTime": {
+                "$ref": "#/definitions/Model7_$clusterTime"
+             },
+             "operationTime": {
+                "type": "string"
+             },
+             "deletedCount": {
+                "type": "integer",
+                "format": "int32"
+             }
+          }
+       },
+       "Model8": {
+          "properties": {
+             "_id": {
+                "type": "string"
+             },
+             "username": {
+                "type": "string"
+             },
+             "password": {
+                "type": "string"
+             },
+             "__v": {
+                "type": "integer",
+                "format": "int32"
+             }
+          }
+       },
+       "Model9": {
+          "properties": {
+             "_id": {
+                "type": "string"
+             },
+             "username": {
+                "type": "string"
+             },
+             "password": {
+                "type": "string"
+             },
+             "__v": {
+                "type": "integer",
+                "format": "int32"
+             }
+          }
+       },
+       "Array": {
+          "properties": {
+             "_id": {
+                "type": "string"
+             },
+             "username": {
+                "type": "string"
+             },
+             "password": {
+                "type": "string"
+             },
+             "__v": {
+                "type": "integer",
+                "format": "int32"
+             }
+          }
+       },
+       "Model10": {
+          "type": "array",
+          "items": {
+             "$ref": "#/definitions/Array"
+          }
+       }
+    }
+ }

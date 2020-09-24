@@ -1,0 +1,8 @@
+/node_modules
+.env
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/pank.iml
+.idea/modules.xml
+.idea/deployment.xml
+.idea/codeStyles/codeStyleConfig.xml
